@@ -39,3 +39,6 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+
+# generated only inside the GitHub Actions runner
+.worker-secrets.json
