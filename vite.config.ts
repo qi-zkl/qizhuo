@@ -14,6 +14,15 @@ const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
 const localBindingConfig = {
   main: "./worker/index.ts",
   compatibility_flags: ["nodejs_compat"],
+  secrets: {
+    required: [
+      "FEISHU_APP_ID",
+      "FEISHU_APP_SECRET",
+      "FEISHU_APP_TOKEN",
+      "FEISHU_GUEST_TABLE_ID",
+      "FEISHU_STAFF_TABLE_ID",
+    ],
+  },
   d1_databases: d1
     ? [
         {
